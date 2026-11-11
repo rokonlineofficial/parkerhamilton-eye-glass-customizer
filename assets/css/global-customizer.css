@@ -1,0 +1,712 @@
+/* ==========================================================================
+   SECTION 1: EXTRA / UTILITY STYLES & ELEMENTOR OVERRIDES
+   ========================================================================== */
+
+/* SUPER-SPECIFIC ELEMENTOR OVERRIDE (FORCES PLUGIN CSS TO WIN) */
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-top: 15px !important;
+}
+
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap .egc-variable-rx-wrapper {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap .woocommerce-variation-add-to-cart {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* FIX BUTTON HEIGHT & VERTICAL TEXT CENTERING */
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap #egc-open-rx-modal.egc-btn-purple,
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap .single_add_to_cart_button {
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 18px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+}
+
+/* QUANTITY INPUT FIX */
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap .quantity {
+    margin: 0 !important;
+    display: inline-flex !important;
+}
+
+html body .elementor-widget-woocommerce-product-add-to-cart .single_variation_wrap .quantity input.qty {
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   SECTION 2: EYEGLASS-CUSTOMIZER.PHP / GLOBAL & MODAL LAYOUT STYLES
+   ========================================================================== */
+
+/* Single Product Action Buttons */
+.egc-actions-wrapper,
+.egc-action-buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Button 1: Add Custom or RX Lenses (Purple) */
+#egc-open-rx-modal.egc-btn-purple {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 24px;
+    background-color: #800080;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 2px 6px rgba(128, 0, 128, 0.25);
+}
+
+#egc-open-rx-modal.egc-btn-purple:hover {
+    background-color: #660066;
+    box-shadow: 0 4px 10px rgba(128, 0, 128, 0.35);
+}
+
+#egc-open-rx-modal.egc-btn-purple:active {
+    transform: translateY(1px);
+}
+
+#egc-open-rx-modal.egc-btn-purple:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(128, 0, 128, 0.3);
+}
+
+/* Button 2: Add to Cart Container (Golden/Yellow) with embedded Qty Select */
+.egc-add-to-cart-form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.egc-qty-cart-container {
+    display: flex;
+    align-items: stretch;
+    height: 46px;
+    background-color: #e6a100;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(230, 161, 0, 0.25);
+    transition: box-shadow 0.25s ease;
+}
+
+.egc-qty-cart-container:hover {
+    box-shadow: 0 4px 10px rgba(230, 161, 0, 0.35);
+}
+
+.egc-qty-select,
+#egc-quantity-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 100%;
+    min-width: 56px;
+    padding: 0 10px;
+    background-color: #cc8f00;
+    color: #ffffff;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%23ffffff' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 22px;
+}
+
+.egc-qty-select:focus,
+#egc-quantity-select:focus {
+    outline: none;
+    background-color: #b87e00;
+}
+
+.egc-btn-add-to-cart.single_add_to_cart_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 22px;
+    background-color: #e6a100;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.egc-btn-add-to-cart.single_add_to_cart_button:hover {
+    background-color: #cc8f00;
+}
+
+.egc-btn-add-to-cart.single_add_to_cart_button:focus {
+    outline: none;
+}
+
+/* Fullscreen Modal Overlay + Wizard Takeover */
+#egc-fullscreen-modal.egc-fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+.egc-modal-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.egc-modal-content {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
+#egc-wizard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    background: #ffffff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.egc-modal-open {
+    overflow: hidden !important;
+    height: 100vh;
+}
+
+body.egc-modal-open > *:not(#egc-fullscreen-modal) {
+    visibility: hidden;
+}
+
+#egc-fullscreen-modal,
+#egc-fullscreen-modal #egc-wizard {
+    visibility: visible;
+}
+
+#egc-close-rx-modal.egc-close-btn {
+    position: relative;
+}
+
+/* Step Header Bar */
+.egc-step-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #ffffff;
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.egc-step-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: #eaeaea;
+    pointer-events: none;
+}
+
+.egc-step-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.egc-step-header.egc-nav-hidden #egc-step-back-btn,
+.egc-step-header.egc-nav-hidden #egc-close-rx-modal {
+    display: none !important;
+}
+
+/* Progress Step Bar */
+.egc-step-progress {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+    position: relative;
+}
+
+.egc-step-progress::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background-color: #d9d9d9;
+    z-index: 1;
+}
+
+.egc-progress-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #999999;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.egc-progress-item .egc-progress-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    display: block;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.egc-progress-item.is-active {
+    color: #2e8b3d;
+    font-weight: 600;
+}
+
+.egc-progress-item.is-active .egc-progress-dot {
+    background-color: #2e8b3d;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #2e8b3d;
+}
+
+.egc-progress-item.is-complete {
+    color: #800080;
+    font-weight: 500;
+}
+
+.egc-progress-item.is-complete .egc-progress-dot {
+    background-color: #800080;
+}
+
+.egc-nav-btn.egc-back-btn {
+    background: #f6b400;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.egc-nav-btn.egc-back-btn:hover {
+    background: #dda200;
+}
+
+.egc-header-close.egc-close-btn {
+    background: #f6b400;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+}
+
+.egc-header-close.egc-close-btn:hover {
+    background: #dda200;
+}
+
+/* Wizard Body Layout */
+.egc-wizard-body {
+    display: flex;
+    gap: 0;
+    min-height: calc(100vh - 68px);
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.egc-wizard-left {
+    flex: 0 0 320px;
+    padding: 24px;
+    border-right: 1px solid #eee;
+    position: sticky;
+    top: 68px;
+    align-self: flex-start;
+    height: calc(100vh - 68px);
+}
+
+.egc-product-image-wrap img {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.egc-price-summary .egc-price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 14px;
+}
+
+.egc-price-summary .egc-price-total-row {
+    font-weight: 700;
+    border-top: 1px solid #eee;
+    margin-top: 4px;
+    padding-top: 8px;
+}
+
+.egc-wizard-right {
+    flex: 1 1 auto;
+    padding: 24px 40px;
+    min-width: 0;
+}
+
+.egc-step-panel {
+    display: none;
+}
+
+.egc-step-panel.is-active {
+    display: block;
+}
+
+.egc-step-title {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.egc-step-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   SECTION 3: MOBILE RESPONSIVE OVERRIDES (PIXEL-PERFECT TO REFERENCE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Header Structure - Absolute Stable Layout */
+    .egc-step-header {
+        display: block !important;
+        padding: 16px 16px 52px 16px !important;
+        position: relative !important;
+        background: #ffffff !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-step-progress {
+        width: 100% !important;
+        justify-content: space-between !important;
+        gap: 0 !important;
+        padding: 0 10px !important;
+        margin: 0 0 16px 0 !important;
+        position: relative !important;
+    }
+
+    .egc-step-progress::before {
+        top: 6px !important;
+        left: 14px !important;
+        right: 14px !important;
+        height: 2px !important;
+        background-color: #d9d9d9 !important;
+    }
+
+    .egc-progress-label {
+        display: none !important;
+    }
+
+    .egc-progress-item .egc-progress-dot {
+        width: 12px !important;
+        height: 12px !important;
+        background-color: #d9d9d9 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .egc-progress-item.is-active .egc-progress-dot {
+        background-color: #ffffff !important;
+        border: 3px solid #111111 !important;
+        width: 14px !important;
+        height: 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-progress-item.is-complete .egc-progress-dot {
+        background-color: #2e8b3d !important;
+        border: none !important;
+    }
+
+    .egc-nav-btn.egc-back-btn {
+        position: absolute !important;
+        left: 16px !important;
+        bottom: 12px !important;
+        background: #000000 !important;
+        color: #ffffff !important;
+        padding: 6px 20px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        border-radius: 3px !important;
+        margin: 0 !important;
+        min-width: 75px !important;
+        text-align: center !important;
+        z-index: 10 !important;
+    }
+
+    .egc-header-close.egc-close-btn {
+        position: absolute !important;
+        right: 16px !important;
+        bottom: 12px !important;
+        background: #000000 !important;
+        color: #ffffff !important;
+        padding: 6px 20px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        border-radius: 3px !important;
+        margin: 0 !important;
+        min-width: 75px !important;
+        text-align: center !important;
+        z-index: 10 !important;
+    }
+
+    .egc-wizard-body {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .egc-wizard-left {
+        display: none !important;
+    }
+
+    .egc-wizard-right {
+        padding: 12px 14px 40px 14px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-card {
+        padding: 0 !important;
+        gap: 12px !important;
+    }
+
+    .egc-card-image {
+        width: 140px !important;
+        min-width: 140px !important;
+    }
+
+    .egc-card-action {
+        padding-right: 12px !important;
+    }
+
+    .egc-select-btn.egc-btn {
+        padding: 6px 14px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .egc-actions-wrapper,
+    .egc-action-buttons-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #egc-open-rx-modal.egc-btn-purple,
+    .egc-add-to-cart-form {
+        width: 100%;
+    }
+
+    .egc-qty-cart-container {
+        width: 100%;
+    }
+
+    .egc-btn-add-to-cart.single_add_to_cart_button {
+        flex: 1 1 auto;
+    }
+}
+
+/* Dynamic Target Box Highlight Pulse (#C9A76D) */
+@keyframes egcHighlightGlow {
+    0% {
+        border-color: #C9A76D !important;
+        box-shadow: 0 0 0 4px rgba(201, 167, 109, 0.45) !important;
+        transform: scale(1.01);
+    }
+    50% {
+        border-color: #C9A76D !important;
+        box-shadow: 0 0 0 8px rgba(201, 167, 109, 0.25) !important;
+    }
+    100% {
+        border-color: #C9A76D !important;
+        box-shadow: 0 0 0 0 rgba(201, 167, 109, 0) !important;
+        transform: scale(1);
+    }
+}
+
+.egc-box-highlight {
+    animation: egcHighlightGlow 1.2s ease-in-out !important;
+    border: 2px solid #C9A76D !important;
+}
+
+/* ==========================================================================
+   PRODUCT COLOR SWATCHES STYLES (MATCHING SCREENSHOT 2)
+   ========================================================================== */
+.egc-swatches-wrapper {
+    margin: 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    clear: both;
+}
+
+.egc-swatch-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.egc-swatches-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.egc-swatch-item {
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.egc-swatch-thumb-box {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background: #f4f4f4;
+    padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.egc-swatch-thumb-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Active & Hover Border: Golden Color (#C9A76D) matching screenshot 2 */
+.egc-swatch-item:hover .egc-swatch-thumb-box,
+.egc-swatch-item.is-active .egc-swatch-thumb-box {
+    border-color: #C9A76D;
+    border-width: 1.5px;
+    box-shadow: 0 2px 6px rgba(201, 167, 109, 0.25);
+    background: #ffffff;
+}
+
+.egc-active-color-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111111;
+    margin-top: 4px;
+}
+
+
+/* Left Sidebar Brand & Category Link Color & Font Size */
+.egc-left-meta-details {
+    font-size: 14px !important; /* Increase or decrease font size here */
+    line-height: 1.6 !important;
+}
+
+.egc-left-meta-details p {
+    font-size: 16px !important;
+    margin-bottom: 5px !important;
+}
+
+.egc-left-meta-details a {
+    color: #C9A76D !important; /* Change your desired link color here */
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    transition: color 0.2s ease;
+}
+
+.egc-left-meta-details a:hover {
+    color: #000000 !important; /* Link color on hover */
+}

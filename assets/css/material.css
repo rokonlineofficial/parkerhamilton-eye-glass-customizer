@@ -1,0 +1,475 @@
+/* Base Material Container Structure - Side-by-side Top Aligned */
+.egc-material-wrapper {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    align-items: flex-start !important;
+    margin-bottom: 40px;
+}
+
+/* Two-Column Layout */
+.egc-material-wrapper.has-sub-cards .egc-sub-cards-container {
+    flex: 1 1 65%;
+    border: 1px solid #e0e0e0;
+    padding: 24px;
+    border-radius: 6px;
+    background: #ffffff;
+    min-height: 380px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.egc-material-wrapper.has-sub-cards .egc-main-cards-container {
+    flex: 0 0 320px;
+}
+
+/* Section Titles */
+.egc-material-wrapper .egc-step-title {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.egc-sub-cards-content .egc-placeholder-text {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 20px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* FULL-WIDTH LAYOUT (When no Sub-Brands exist) */
+.egc-material-wrapper.no-sub-cards,
+.egc-material-wrapper.full-width-layout {
+    display: block;
+    width: 100%;
+}
+
+.egc-material-wrapper.no-sub-cards .egc-sub-cards-container,
+.egc-material-wrapper.full-width-layout .egc-sub-cards-container {
+    display: none !important;
+}
+
+.egc-material-wrapper.no-sub-cards .egc-main-cards-container,
+.egc-material-wrapper.full-width-layout .egc-main-cards-container {
+    width: 100% !important;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Material Card Styling (Right Sidebar) */
+.egc-material-card {
+    position: relative;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 24px 16px 18px 16px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    overflow: visible !important;
+    transition: all 0.25s ease;
+}
+
+.egc-material-card:hover,
+.egc-material-card.is-active,
+.egc-material-card.is-selected {
+    border-color: #800080;
+    box-shadow: 0 4px 12px rgba(128, 0, 128, 0.12);
+}
+
+/* Badge Positioning */
+.egc-material-card .egc-card-badge {
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    background: #fca311;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+}
+
+.egc-material-card-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Compact Button */
+.egc-material-card .egc-select-btn {
+    height: auto !important;
+    min-height: 38px !important;
+    max-height: 42px !important;
+    padding: 8px 18px !important;
+    align-self: center !important;
+    margin: auto 0 !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.egc-material-card .egc-select-btn:hover {
+    background: #333333;
+}
+
+/* Price Breakdown Summary Styling */
+.egc-main-cards-container .egc-step-price-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #eeeeee;
+    text-align: right;
+}
+
+.egc-main-cards-container .egc-step-price-summary .egc-summary-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 4px;
+}
+
+.egc-main-cards-container .egc-step-price-summary .egc-summary-value {
+    font-weight: 700;
+    color: #111111;
+}
+
+.egc-main-cards-container .egc-step-price-summary .egc-grand-total {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #dddddd;
+}
+
+/* CENTER SUB CARD ITEM BOX - 3 COLUMN FLEX LAYOUT */
+.egc-sub-card-item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #ffffff;
+    gap: 20px;
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+    position: relative;
+}
+
+.egc-sub-card-item:hover,
+.egc-sub-card-item.is-selected {
+    border-color: #800080;
+    box-shadow: 0 4px 14px rgba(128, 0, 128, 0.12);
+    transform: translateY(-1px);
+}
+
+/* Left Column: Image + Title */
+.egc-sub-card-col-left {
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-right: 15px;
+    border-right: 1px solid #f0f0f0;
+}
+
+.egc-sub-card-image {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+.egc-sub-card-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.egc-sub-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Middle Column: Text Content & Price */
+.egc-sub-card-col-middle {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+    color: #444444;
+    line-height: 1.5;
+}
+
+.egc-sub-card-col-middle p {
+    margin: 0 0 8px 0;
+}
+
+.egc-sub-card-col-middle ul {
+    margin: 6px 0;
+    padding-left: 18px;
+}
+
+.egc-sub-card-col-middle li {
+    margin-bottom: 3px;
+}
+
+.egc-sub-card-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin-top: 8px;
+}
+
+/* Right Column: Badge Tag + Select Button */
+.egc-sub-card-col-right {
+    flex: 0 0 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.egc-sub-card-badge-tag {
+    background: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #222222;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.egc-sub-card-col-right .egc-select-btn {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.egc-sub-card-col-right .egc-select-btn:hover {
+    background: #333333;
+}
+
+/* ACCORDION SECTION */
+.egc-material-notes-wrap {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.lenses-note-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.lenses-note-title {
+    padding: 14px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    user-select: none;
+}
+
+.lenses-note-title * {
+    pointer-events: none;
+}
+
+.lenses-note-item .collapse {
+    display: none;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #f0f0f0;
+    background: #ffffff;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE OVERRIDES (STEP 3: MATERIAL)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Stack Container Vertically: Brand on Top, Material List Below */
+    .egc-material-wrapper {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Top: Select Lens Brand Container (Full Width) */
+    .egc-material-wrapper.has-sub-cards .egc-sub-cards-container {
+        width: 100% !important;
+        flex: none !important;
+        min-height: auto !important;
+        padding: 16px !important;
+        box-sizing: border-box !important;
+        border: 1px solid #dcdcdc !important;
+        border-radius: 6px !important;
+        background: #ffffff !important;
+    }
+
+    .egc-material-wrapper .egc-step-title {
+        font-size: 18px !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* Bottom: Main Material Cards Container */
+    .egc-material-wrapper.has-sub-cards .egc-main-cards-container,
+    .egc-main-cards-container {
+        width: 100% !important;
+        flex: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Main Material Card Styling in Mobile */
+    .egc-material-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        padding: 20px 16px 16px 16px !important; /* Generous internal padding */
+        margin-top: 18px !important;
+        margin-bottom: 14px !important;
+        gap: 12px !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        border-radius: 6px !important;
+    }
+
+    /* Badge on Top Right */
+    .egc-material-card .egc-card-badge {
+        position: absolute !important;
+        top: -10px !important;
+        right: 14px !important;
+        z-index: 10 !important;
+    }
+
+    /* Card Content & Text Spacing */
+    .egc-material-card-content {
+        width: 100% !important;
+    }
+
+    .egc-material-card .egc-card-title {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .egc-material-card .egc-card-description {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    .egc-material-card .egc-card-description ul {
+        margin: 4px 0 0 0 !important;
+        padding-left: 18px !important;
+    }
+
+    .egc-material-card .egc-card-description li {
+        margin-bottom: 4px !important;
+    }
+
+    /* Select Button at Bottom Right */
+    .egc-material-card .egc-select-btn {
+        align-self: flex-end !important;
+        margin-top: 6px !important;
+        background: #8a2be2 !important; /* Matches reference theme */
+        color: #ffffff !important;
+        padding: 8px 20px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        border-radius: 3px !important;
+    }
+
+    /* 3. Sub-Card Item Loaded on Top (Responsive Stack) */
+    .egc-sub-card-item {
+        flex-direction: column !important;
+        padding: 16px !important;
+        gap: 12px !important;
+        position: relative !important;
+    }
+
+    .egc-sub-card-col-left {
+        flex: none !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 10px !important;
+    }
+
+    .egc-sub-card-col-middle {
+        width: 100% !important;
+    }
+
+    .egc-sub-card-col-right {
+        flex: none !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-top: 8px !important;
+    }
+
+    .egc-sub-card-col-right .egc-select-btn {
+        margin-top: 0 !important;
+        margin-left: auto !important;
+        background: #8a2be2 !important;
+    }
+
+    /* Price Summary Box */
+    .egc-main-cards-container .egc-step-price-summary {
+        margin-top: 15px !important;
+        padding-right: 5px !important;
+    }
+
+    /* Notes / Accordion at bottom */
+    .egc-material-notes-wrap {
+        margin-top: 25px !important;
+        padding-top: 15px !important;
+    }
+}

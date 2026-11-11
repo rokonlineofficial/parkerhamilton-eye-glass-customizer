@@ -1,0 +1,250 @@
+/* ==========================================================================
+   SECTION 3: STEP 1 STYLES (CARDS & GENERAL CARDS)
+   ========================================================================== */
+
+.egc-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.egc-card {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 0 20px 0 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.egc-card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.egc-card.is-selected {
+    border-color: #800080;
+    box-shadow: 0 0 0 2px rgba(128, 0, 128, 0.15);
+}
+
+.egc-card-image {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.egc-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.egc-card-body {
+    flex: 1 1 auto;
+    padding: 16px 0;
+}
+
+.egc-card-title {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.egc-card-description {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.4;
+}
+
+.egc-card-description ul {
+    margin: 6px 0 0 0 !important;
+    padding-left: 18px !important;
+    list-style-type: disc !important;
+}
+
+.egc-card-description li {
+    font-size: 13px !important;
+    color: #555555 !important;
+    margin-bottom: 3px !important;
+    line-height: 1.3 !important;
+}
+
+.egc-card-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+}
+
+.egc-card-price {
+    font-weight: 600;
+}
+
+.egc-card-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #f6b400;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.egc-badge-blue {
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.egc-select-btn.egc-btn {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.egc-select-btn.egc-btn:hover {
+    background: #333333;
+}
+
+.egc-step-price-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.egc-step-price-summary .egc-summary-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.egc-step-price-summary .egc-summary-value {
+    font-weight: 700;
+}
+
+.egc-step-price-summary .egc-grand-total {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.egc-trust-wrapper {
+    margin-top: 45px;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE OVERRIDES (STEP 1: RX-TYPE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .egc-card-list {
+        gap: 20px;
+        padding: 0 4px;
+    }
+
+    /* 1. Vertical Card Box */
+    .egc-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        border: 1px solid #dcdcdc !important;
+        border-radius: 6px !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    /* 2. Top Image Full Width */
+    .egc-card-image {
+        width: 100% !important;
+        height: 180px !important;
+        background: #f8f8f8 !important;
+        overflow: hidden !important;
+    }
+
+    .egc-card-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    /* 3. Bottom Content Box */
+    .egc-card-body {
+        padding: 16px 16px 8px 16px !important;
+        flex: none !important;
+    }
+
+    .egc-card-title {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #111111 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .egc-card-description {
+        font-size: 13px !important;
+        color: #555555 !important;
+        line-height: 1.4 !important;
+    }
+
+    .egc-card-description ul {
+        margin: 4px 0 0 0 !important;
+        padding-left: 18px !important;
+    }
+
+    .egc-card-description li {
+        margin-bottom: 4px !important;
+    }
+
+    /* 4. Action Row & Select Button Bottom Right */
+    .egc-card-action {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        padding: 0 16px 16px 16px !important;
+        gap: 12px !important;
+    }
+
+    .egc-card-price {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        color: #111111 !important;
+        margin-right: auto !important; /* Pushes price to left if exists */
+    }
+
+    .egc-select-btn.egc-btn {
+        background: #8a2be2 !important; /* Reference purple theme */
+        color: #ffffff !important;
+        border-radius: 3px !important;
+        padding: 8px 22px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        box-shadow: none !important;
+    }
+
+    /* Price breakdown summary in mobile */
+    .egc-step-price-summary {
+        margin-top: 15px !important;
+        margin-bottom: 25px !important;
+        padding-right: 10px !important;
+    }
+}

@@ -1,0 +1,464 @@
+/* Container Layout */
+.egc-coating-wrapper {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* Center Content Box */
+.egc-coating-center-container {
+    flex: 1 1 65%;
+    border: 1px solid #e0e0e0;
+    padding: 24px;
+    border-radius: 6px;
+    background: #ffffff;
+    min-height: 420px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.egc-coating-center-content .egc-placeholder-text {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Sidebar Container */
+.egc-coating-sidebar-container {
+    flex: 0 0 320px;
+}
+
+.egc-step-panel[data-step="4"] .egc-step-title {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Sidebar Coating Cards */
+.egc-coating-card {
+    position: relative;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 22px 16px 16px 16px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    overflow: visible !important;
+    transition: all 0.25s ease;
+}
+
+.egc-coating-card:hover,
+.egc-coating-card.is-active,
+.egc-coating-card.is-selected {
+    border-color: #800080;
+    box-shadow: 0 4px 12px rgba(128, 0, 128, 0.12);
+}
+
+.egc-coating-card .egc-card-badge {
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    background: #fca311;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.egc-coating-card .egc-select-btn {
+    height: auto !important;
+    min-height: 38px !important;
+    padding: 8px 18px !important;
+    align-self: center !important;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* CENTER AREA: Featured Coating Parent Card */
+.egc-featured-coating-card {
+    position: relative;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 24px 20px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s ease;
+}
+
+.egc-featured-coating-card:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.egc-featured-left-image,
+.egc-featured-right-image {
+    flex: 0 0 auto;
+    max-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.egc-featured-left-image img,
+.egc-featured-right-image img {
+    max-width: 100%;
+    max-height: 85px;
+    object-fit: contain;
+}
+
+.egc-featured-coating-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.egc-badge-top-right {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: #e8f0fe;
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+.egc-featured-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #111111;
+}
+
+.egc-featured-description {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.egc-purple-btn {
+    background-color: #800080 !important;
+    color: #ffffff !important;
+    padding: 8px 20px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    flex-shrink: 0;
+}
+
+/* CENTER AREA: Select Lens Color Section */
+.egc-lens-color-section {
+    margin-top: 20px;
+}
+
+.egc-color-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+/* Color Cards 3-Column Grid */
+.egc-color-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.egc-color-card-item {
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 16px 12px;
+    background: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.egc-color-card-item:hover,
+.egc-color-card-item.is-selected {
+    border-color: #800080;
+    box-shadow: 0 4px 12px rgba(128, 0, 128, 0.15);
+}
+
+/* Color Swatch Image */
+.egc-color-card-img {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.egc-color-card-img img {
+    max-height: 65px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Main Eyewear Product Thumbnail */
+.egc-color-card-product-thumb {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.egc-color-card-product-thumb img {
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.egc-color-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #222222;
+    line-height: 1.3;
+}
+
+.egc-color-card-item .egc-select-btn {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.egc-color-card-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Price Breakdown Summary Styling */
+.egc-coating-sidebar-container .egc-step-price-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #eeeeee;
+    text-align: right;
+}
+
+.egc-coating-sidebar-container .egc-step-price-summary .egc-summary-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 4px;
+}
+
+.egc-coating-sidebar-container .egc-step-price-summary .egc-summary-value {
+    font-weight: 700;
+    color: #111111;
+}
+
+.egc-coating-sidebar-container .egc-step-price-summary .egc-grand-total {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #dddddd;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE OVERRIDES (STEP 4: COATING)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Stack Container Vertically: Top Featured Box First, Sidebar Below */
+    .egc-coating-wrapper {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* 2. Top Container: Auto-Expanding Height & Overflow Visible */
+    .egc-coating-center-container {
+        width: 100% !important;
+        flex: none !important;
+        min-height: auto !important;
+        height: auto !important; /* Expands smoothly when color swatches open */
+        overflow: visible !important;
+        padding: 16px !important;
+        box-sizing: border-box !important;
+        border: 1px solid #dcdcdc !important;
+        border-radius: 6px !important;
+        background: #ffffff !important;
+    }
+
+    .egc-coating-center-content .egc-placeholder-text {
+        margin-top: 10px !important;
+        font-size: 13px !important;
+    }
+
+    /* Featured Parent Card Inside Top Container */
+    .egc-featured-coating-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 16px !important;
+        gap: 12px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .egc-featured-left-image,
+    .egc-featured-right-image {
+        max-width: 100px !important;
+        margin: 0 auto !important;
+    }
+
+    .egc-featured-title {
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+
+    .egc-featured-description {
+        font-size: 12px !important;
+        text-align: center !important;
+    }
+
+    .egc-featured-coating-card .egc-purple-btn {
+        width: 100% !important;
+        text-align: center !important;
+        margin-top: 8px !important;
+    }
+
+    /* 3. Lens Color Swatch Section Auto Visibility */
+    .egc-lens-color-section {
+        width: 100% !important;
+        display: block;
+        margin-top: 15px !important;
+        clear: both !important;
+    }
+
+    /* Color Swatches 2-Column Grid on Mobile */
+    .egc-color-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .egc-color-card-item {
+        padding: 10px 6px !important;
+    }
+
+    .egc-color-card-img {
+        height: 50px !important;
+    }
+
+    .egc-color-card-product-thumb {
+        height: 70px !important;
+    }
+
+    /* 4. Bottom: Select Lens Visibility Cards (Full Width Stack) */
+    .egc-coating-sidebar-container {
+        width: 100% !important;
+        flex: none !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-step-panel[data-step="4"] .egc-step-title {
+        font-size: 18px !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* Coating Main Cards: Spacing & Padding Fix */
+    .egc-coating-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        padding: 20px 16px 16px 16px !important;
+        margin-top: 18px !important;
+        margin-bottom: 14px !important;
+        gap: 12px !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        border-radius: 6px !important;
+    }
+
+    .egc-coating-card .egc-card-badge {
+        position: absolute !important;
+        top: -10px !important;
+        right: 14px !important;
+        z-index: 10 !important;
+    }
+
+    .egc-coating-card .egc-card-body {
+        width: 100% !important;
+    }
+
+    .egc-coating-card .egc-card-title {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .egc-coating-card .egc-card-description {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    .egc-coating-card .egc-card-description ul {
+        margin: 4px 0 0 0 !important;
+        padding-left: 18px !important;
+    }
+
+    .egc-coating-card .egc-card-description li {
+        margin-bottom: 4px !important;
+    }
+
+    /* Select Button at Bottom Right */
+    .egc-coating-card .egc-select-btn {
+        align-self: flex-end !important;
+        margin-top: 6px !important;
+        background: #8a2be2 !important;
+        color: #ffffff !important;
+        padding: 8px 20px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        border-radius: 3px !important;
+    }
+
+    /* Price Summary Box */
+    .egc-coating-sidebar-container .egc-step-price-summary {
+        margin-top: 15px !important;
+        padding-right: 5px !important;
+    }
+}

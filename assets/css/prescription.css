@@ -1,0 +1,402 @@
+/* ==========================================================================
+   SECTION 4: STEP 2 STYLES (PRESCRIPTION)
+   ========================================================================== */
+
+.egc-step-panel[data-step="2"] select.egc-select {
+    font-size: 13px !important;
+    padding: 3px 6px !important;
+    height: 32px !important;
+    border-radius: 3px !important;
+}
+
+.egc-step-panel[data-step="2"] .egc-rx-table td select {
+    width: 100% !important;
+}
+
+.egc-step-panel[data-step="2"] .egc-pd-reference-image {
+    max-width: 130px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.egc-magnification-toggle-area {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+.egc-radio-option {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.egc-magnification-power-wrap {
+    margin: 10px 0 16px 26px;
+}
+
+.egc-rx-entry-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.egc-rx-tab-btn.egc-btn {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #800080;
+    color: #800080;
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.egc-rx-tab-btn.egc-btn.is-active,
+.egc-rx-tab-btn.egc-btn-purple.is-active {
+    background: #800080;
+    color: #ffffff;
+}
+
+.egc-rx-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.egc-rx-table th,
+.egc-rx-table td {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+.egc-select,
+.egc-text-input {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.egc-pd-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.egc-checkbox-option {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.egc-rx-upload-box {
+    background: #f5f8ff;
+    border: 1px solid #dce4f5;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.egc-upload-hint {
+    font-size: 13px;
+    color: #777;
+}
+
+.egc-btn-gold {
+    background: #e6a100;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.egc-btn-gold:hover {
+    background: #cc8f00;
+}
+
+.egc-file-name {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.egc-prism-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.egc-prism-hint {
+    color: #888;
+    font-size: 13px;
+}
+
+.egc-dob-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.egc-pd-table-row td {
+    vertical-align: middle;
+}
+
+.egc-pd-controls-cell {
+    text-align: left;
+}
+
+.egc-pd-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.egc-pd-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.egc-pd-image-cell {
+    width: 160px;
+    text-align: center;
+}
+
+.egc-pd-reference-image {
+    max-width: 140px;
+    height: auto;
+    display: inline-block;
+}
+
+/* ACCORDION STYLES */
+.egc-lenses-notes-wrap {
+    margin-top: 25px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.egc-note-item {
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 4px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.egc-note-item:last-child {
+    border-bottom: none;
+}
+
+.egc-note-title {
+    width: 100% !important;
+    text-align: left !important;
+    background: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 14px 18px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: #333333 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    transition: background 0.2s ease, color 0.2s ease;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.egc-note-title:hover {
+    background: #f9f9f9 !important;
+    color: #000000 !important;
+}
+
+.egc-note-title .egc-icon {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #444444 !important;
+}
+
+.egc-note-content {
+    display: none !important;
+    padding: 16px 18px 20px 18px !important;
+    font-size: 14px !important;
+    color: #555555 !important;
+    line-height: 1.6 !important;
+    background: #ffffff !important;
+    border-top: 1px solid #f0f0f0 !important;
+}
+
+.egc-note-content h2 {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    color: #111111 !important;
+}
+
+.egc-note-content p {
+    margin: 0 0 10px 0 !important;
+}
+
+.egc-note-content p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE OVERRIDES (STEP 2: PRESCRIPTION)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Stack Prescription Tabs Vertically */
+    .egc-step-panel[data-step="2"] {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .egc-rx-entry-tabs {
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin-bottom: 18px !important;
+        width: 100% !important;
+    }
+
+    .egc-rx-tab-btn.egc-btn {
+        width: 100% !important;
+        flex: none !important;
+        padding: 10px 12px !important;
+        font-size: 13px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Responsive Table Grid & Full Visibility Dropdowns */
+    .egc-rx-table {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        table-layout: fixed !important;
+    }
+
+    .egc-rx-table th,
+    .egc-rx-table td {
+        padding: 6px 3px !important;
+        font-size: 11px !important;
+    }
+
+    .egc-rx-table th:first-child,
+    .egc-rx-table td:first-child {
+        width: 22% !important;
+        font-size: 11px !important;
+        padding: 6px 2px !important;
+    }
+
+    .egc-rx-table th:not(:first-child) {
+        width: 19.5% !important;
+    }
+
+    .egc-step-panel[data-step="2"] select.egc-select,
+    .egc-rx-table td select {
+        width: 100% !important;
+        height: 34px !important;
+        font-size: 11px !important;
+        padding: 2px 2px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 3px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        text-align-last: center !important;
+        background-position: calc(100% - 2px) center !important;
+    }
+
+    /* 3. PD Row & Dual Numbers Controls */
+    .egc-pd-table-row td {
+        padding: 8px 4px !important;
+    }
+
+    .egc-checkbox-option {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+        display: inline-flex !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+    }
+
+    .egc-pd-image-cell {
+        width: 70px !important;
+        padding: 4px !important;
+    }
+
+    .egc-pd-reference-image {
+        max-width: 65px !important;
+    }
+
+    /* 4. Bottom Right Controls: PRISM & DOB RIGHT-ALIGNED */
+    .egc-rx-bottom-right-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important; /* Forces right alignment */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-prism-row {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-end !important; /* Aligns to right */
+        align-items: center !important;
+        text-align: right !important;
+        gap: 8px !important;
+        font-size: 13px !important;
+        width: 100% !important;
+        margin-bottom: 6px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .egc-prism-hint {
+        width: 100% !important;
+        text-align: right !important; /* Hint aligned to right */
+        margin-top: 2px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .egc-dob-row {
+        display: flex !important;
+        justify-content: flex-end !important; /* Aligns to right */
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Save and Continue Button */
+    .egc-step-panel[data-step="2"] .egc-next-btn {
+        width: 100% !important;
+        padding: 12px !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+    }
+
+    /* Price Summary Box in Mobile */
+    .egc-rx-bottom-right-container .egc-step-price-summary {
+        width: 100% !important;
+        margin-top: 15px !important;
+        text-align: right !important;
+    }
+}

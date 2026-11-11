@@ -1,0 +1,486 @@
+/* Step 5 Features Container */
+.egc-features-promo-banner {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.egc-features-promo-banner .egc-promo-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111111;
+    letter-spacing: 0.5px;
+}
+
+.egc-promo-image-wrap img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Features Table Grid Container */
+.egc-features-table-container {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #ffffff;
+    overflow: visible !important;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.egc-features-table-container .row-option {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 0;
+    padding: 0;
+    min-width: 960px;
+}
+
+.egc-features-table-container .row-option:last-child {
+    border-bottom: none;
+}
+
+/* Header Row Styling */
+.option-head {
+    background: #f1f5f9;
+    font-weight: 700;
+    font-size: 12px;
+    color: #1e293b;
+    border-bottom: 2px solid #cbd5e1 !important;
+    overflow: visible !important;
+    position: relative;
+    z-index: 20;
+}
+
+/* First Column: Title / Logo Cell (210px) */
+.egc-head-title-col,
+.egc-feature-title-cell {
+    flex: 0 0 210px;
+    width: 210px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-right: 1px solid #e2e8f0;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+.egc-head-title-col {
+    color: #1e3a8a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.egc-feature-title-img {
+    max-height: 38px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* Red Play Button Video Icon Styling */
+.egc-video-trigger-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.egc-watch-video-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.egc-video-trigger-btn:hover .egc-watch-video-icon {
+    transform: scale(1.15);
+}
+
+/* Middle 10 Advantage & Checkmark Columns */
+.td-adv-title,
+.egc-check-cell {
+    flex: 1 1 0;
+    min-width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 4px;
+    border-right: 1px solid #e2e8f0;
+    box-sizing: border-box;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Advantage Icon Styling */
+.option-advantage-title {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 25;
+}
+
+.option-advantage-title img {
+    max-height: 44px;
+    max-width: 44px;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+.question-mark {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #cbd5e1;
+    color: #475569;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* Tooltip Popup Box Styling */
+.option-advantage-description {
+    display: none;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 220px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18) !important;
+    padding: 12px 14px !important;
+    font-size: 12px !important;
+    color: #1e293b !important;
+    z-index: 99999 !important;
+    border-radius: 6px !important;
+    text-align: left !important;
+    margin-top: 8px !important;
+    pointer-events: auto !important;
+}
+
+.option-advantage-description p {
+    margin: 0 0 6px 0 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    line-height: 1.4 !important;
+}
+
+.option-advantage-description ul {
+    margin: 4px 0 0 0 !important;
+    padding-left: 16px !important;
+}
+
+.option-advantage-description li {
+    font-size: 11px !important;
+    color: #334155 !important;
+    margin-bottom: 3px !important;
+    line-height: 1.35 !important;
+}
+
+.check-mark {
+    color: #1e3a8a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.check-mark sup {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Price Column (95px) */
+.td-price,
+.egc-feature-price-cell {
+    flex: 0 0 95px;
+    width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: right;
+    border-right: 1px solid #e2e8f0;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/* Action Button Column (135px) */
+.select-lens-option,
+.egc-feature-action-cell {
+    flex: 0 0 135px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.egc-feature-dropdown-select {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+
+.egc-toggle-feature-btn {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.egc-toggle-feature-btn.is-active {
+    background: #800080;
+}
+
+.egc-feature-note-footnote {
+    padding: 10px 14px;
+    font-size: 11px;
+    color: #64748b;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Footer Section */
+.egc-step5-footer-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.egc-btn-red {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    padding: 10px 28px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 4px !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+.egc-btn-red:hover {
+    background: #b91c1c !important;
+}
+
+.egc-step5-footer-wrap .egc-step-price-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid #eeeeee;
+    text-align: right;
+}
+
+.egc-step5-footer-wrap .egc-step-price-summary .egc-summary-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 4px;
+}
+
+.egc-step5-footer-wrap .egc-step-price-summary .egc-summary-value {
+    font-weight: 700;
+    color: #111111;
+}
+
+.egc-step5-footer-wrap .egc-step-price-summary .egc-grand-total {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #dddddd;
+}
+
+.egc-warranty-box {
+    margin-top: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px 24px;
+    background: #ffffff;
+    text-align: center;
+    max-width: 580px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.egc-warranty-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+}
+
+.egc-warranty-desc {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+}
+
+.egc-warranty-link {
+    font-size: 12px;
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.egc-warranty-link:hover {
+    color: #1d4ed8;
+}
+
+/* Video Modal Overlay */
+.egc-video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.egc-video-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 640px;
+    height: 360px;
+    background: #000000;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.egc-video-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#egc-video-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES (STEP 5: FEATURES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* 1. Header Promo Banner */
+    .egc-promo-image-wrap img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 2. Responsive Scrollable Table Container (No Overflow Beyond Screen) */
+    .egc-features-table-container {
+        width: 100% !important;
+        overflow-x: auto !important; /* Smooth touch horizontal scroll inside the box */
+        -webkit-overflow-scrolling: touch !important;
+        box-sizing: border-box !important;
+        border: 1px solid #cbd5e1 !important;
+        position: relative !important;
+    }
+
+    .egc-features-table-container .row-option {
+        min-width: 860px !important; /* Standard width for 12 columns inside scrollable container */
+    }
+
+    /* 3. Sticky First Column: Brand Logo/Title stays locked on left while scrolling */
+    .egc-head-title-col,
+    .egc-feature-title-cell {
+        position: sticky !important;
+        left: 0 !important;
+        z-index: 15 !important;
+        background: #f8fafc !important;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.06) !important;
+        flex: 0 0 170px !important;
+        width: 170px !important;
+        padding: 10px 8px !important;
+    }
+
+    .option-head .egc-head-title-col {
+        background: #f1f5f9 !important;
+        z-index: 25 !important;
+    }
+
+    /* Compact icons & columns */
+    .td-adv-title,
+    .egc-check-cell {
+        min-width: 48px !important;
+        padding: 6px 2px !important;
+    }
+
+    .option-advantage-title img {
+        max-height: 36px !important;
+        max-width: 36px !important;
+    }
+
+    /* 4. Footer & Action Positioning */
+    .egc-step5-footer-wrap {
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    .egc-step5-footer-wrap .egc-btn-red {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px !important;
+        font-size: 15px !important;
+    }
+
+    .egc-step5-footer-wrap .egc-step-price-summary {
+        width: 100% !important;
+        align-items: flex-end !important;
+    }
+
+    .egc-warranty-box {
+        max-width: 100% !important;
+        padding: 16px !important;
+    }
+}

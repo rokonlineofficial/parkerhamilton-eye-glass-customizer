@@ -1,0 +1,442 @@
+/* SUMMARY STEP BOXED GRID LAYOUT */
+.egc-step-panel[data-step="6"] .egc-step-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #111111;
+}
+
+/* Card Rows */
+.egc-summary-cards-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.egc-row-3col .egc-summary-card-box {
+    flex: 1;
+    min-width: 0;
+}
+
+.egc-row-2col .egc-summary-card-box {
+    flex: 1;
+    min-width: 0;
+}
+
+.egc-row-2col .egc-box-wide {
+    flex: 1.5;
+}
+
+/* Individual Card Box Styling */
+.egc-summary-card-box {
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 16px 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+/* CENTERED BOX TITLES */
+.egc-sum-box-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666666;
+    margin: 0 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center !important; /* Aligns RX TYPE, MATERIAL, COATING, etc. to center */
+}
+
+.egc-sum-box-body {
+    font-size: 14px;
+    color: #222222;
+    flex: 1 1 auto;
+}
+
+/* Image inside Summary Boxes */
+.egc-sum-box-img {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.egc-sum-box-img img {
+    max-height: 60px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.egc-sum-val {
+    font-weight: 600;
+    margin: 0;
+    color: #111111;
+}
+
+/* Features Grid inside Box */
+.egc-sum-features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.egc-sum-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.egc-sum-feature-item:last-child {
+    border-bottom: none;
+}
+
+.egc-sum-feature-thumb {
+    max-height: 30px;
+    max-width: 60px;
+    object-fit: contain;
+}
+
+.egc-sum-feature-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+}
+
+.egc-sum-feature-price {
+    font-weight: 700;
+    color: #C9A76D;
+}
+
+.egc-prescription-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.egc-prescription-summary-table th,
+.egc-prescription-summary-table td {
+    border: 1px solid #e0e0e0;
+    padding: 4px 6px;
+    text-align: center;
+}
+
+.egc-prescription-summary-table th {
+    background: #f8fafc;
+}
+
+/* BOTTOM SPLIT SECTION */
+.egc-summary-bottom-section {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    align-items: flex-start;
+}
+
+/* Left Sub-Column (Product Info) */
+.egc-summary-prod-details-col {
+    flex: 0 0 300px;
+    border-right: 1px solid #eeeeee;
+    padding-right: 24px;
+}
+
+.egc-summary-product-img img {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.egc-summary-product-meta .egc-sum-prod-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #111111;
+}
+
+.egc-summary-product-meta p {
+    font-size: 13px;
+    color: #555555;
+    margin: 0 0 6px 0;
+}
+
+/* Right Sub-Column (Comments & Add to Cart) */
+.egc-summary-action-col {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.egc-summary-comments {
+    margin-bottom: 16px;
+}
+
+.egc-summary-comments label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #333333;
+}
+
+.egc-summary-comments textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 13px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Price Breakdown */
+.egc-summary-price-breakdown {
+    margin-bottom: 12px;
+}
+
+.egc-summary-price-breakdown .egc-price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 4px;
+}
+
+/* PROMINENT GRAND TOTAL PRICE DISPLAY */
+.egc-prominent-total-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border: 2px solid #C9A76D;
+    border-radius: 6px;
+    padding: 12px 18px;
+    margin-bottom: 18px;
+}
+
+.egc-prominent-total-box .egc-total-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.egc-prominent-total-box .egc-total-amount {
+    font-size: 24px;
+    font-weight: 800;
+    color: #C9A76D;
+}
+
+/* COLOR & STYLING ADJUSTMENTS (#C9A76D Theme) */
+#egc-submit-customization.egc-btn-purple,
+.egc-btn-purple {
+    background-color: #8a2be2 !important;
+    color: #ffffff !important;
+    border: none !important;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+#egc-submit-customization.egc-btn-purple:hover,
+.egc-btn-purple:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.egc-full-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+/* Links Theme Styling */
+.egc-step-panel[data-step="6"] a,
+.egc-gold-link,
+.egc-prescription-file-wrap a,
+.egc-warranty-link {
+    color: #C9A76D !important;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.egc-step-panel[data-step="6"] a:hover,
+.egc-gold-link:hover,
+.egc-prescription-file-wrap a:hover,
+.egc-warranty-link:hover {
+    color: #000000 !important;
+}
+
+.egc-alert {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.egc-alert-success {
+    background-color: #e3f3e6;
+    color: #1e6b30;
+    border: 1px solid #b7e0be;
+}
+
+.egc-post-cart-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.egc-btn-continue-shopping {
+    flex: 1;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.egc-btn-proceed-checkout {
+    flex: 1;
+    background-color: #C9A76D;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.egc-btn-proceed-checkout:hover {
+    background-color: #000000;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES (STEP 6: SUMMARY)
+   ========================================================================== */
+@media (max-width: 800px) {
+    .egc-summary-cards-row {
+        flex-direction: column !important;
+        gap: 14px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .egc-summary-card-box {
+        width: 100% !important;
+        padding: 16px 18px !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-sum-box-title {
+        text-align: center !important;
+    }
+
+    .egc-sum-box-img {
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+
+    .egc-sum-box-img img {
+        max-height: 70px !important;
+    }
+
+    .egc-sum-val {
+        text-align: center !important;
+        font-size: 15px !important;
+    }
+
+    .egc-summary-bottom-section {
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding-top: 16px !important;
+    }
+
+    .egc-summary-prod-details-col {
+        border-right: none !important;
+        padding-right: 0 !important;
+        border-bottom: 1px solid #eee !important;
+        padding-bottom: 20px !important;
+        width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-summary-product-img img {
+        margin: 0 auto 14px auto !important;
+        max-height: 160px !important;
+    }
+
+    .egc-summary-action-col {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .egc-summary-comments {
+        width: 100% !important;
+        margin-bottom: 16px !important;
+    }
+
+    .egc-summary-comments textarea {
+        width: 100% !important;
+        font-size: 14px !important;
+        padding: 12px !important;
+    }
+
+    .egc-summary-price-breakdown {
+        width: 100% !important;
+        margin-bottom: 14px !important;
+    }
+
+    .egc-summary-price-breakdown .egc-price-row {
+        font-size: 14px !important;
+        padding: 2px 0 !important;
+    }
+
+    .egc-prominent-total-box {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 14px 18px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .egc-prominent-total-box .egc-total-label {
+        font-size: 16px !important;
+    }
+
+    .egc-prominent-total-box .egc-total-amount {
+        font-size: 22px !important;
+    }
+
+    #egc-submit-customization.egc-btn-purple {
+        width: 100% !important;
+        display: block !important;
+        height: 48px !important;
+        line-height: 48px !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        border-radius: 4px !important;
+    }
+
+    .egc-post-cart-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .egc-btn-continue-shopping,
+    .egc-btn-proceed-checkout {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 14px !important;
+    }
+}
